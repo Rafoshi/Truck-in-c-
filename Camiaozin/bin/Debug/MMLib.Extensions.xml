@@ -1,0 +1,334 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MMLib.Extensions</name>
+    </assembly>
+    <members>
+        <member name="T:MMLib.Extensions.DateTimeExtensions">
+            <summary>
+            Extensions for DataTime class.
+            </summary>
+        </member>
+        <member name="M:MMLib.Extensions.DateTimeExtensions.IsWeekend(System.DateTime)">
+            <summary>
+            Determine whether date is weekend.
+            </summary>
+            <param name="value">Date, which want tested.</param>
+            <returns>true if date is in weekend, otherwise false.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.DateTimeExtensions.IsLeapYear(System.DateTime)">
+            <summary>
+            Determine whether year from date is leap.
+            </summary>
+            <param name="value">Date, which want tested.</param>
+            <returns>true if year is leap, otherwise false.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.DateTimeExtensions.IsLastDayOfMonth(System.DateTime)">
+            <summary>
+            Determine whether day from date is last day of the month.
+            </summary>
+            <param name="value">Date, which want tested.</param>
+            <returns>true if leap, otherwise false.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.DateTimeExtensions.IsInRange(System.DateTime,System.DateTime,System.DateTime)">
+            <summary>
+            Determine whether date is in date range.
+            </summary>
+            <param name="value">Checked date.</param>
+            <param name="startDate">Start date.</param>
+            <param name="endDate">End date.</param>
+            <returns>
+            true if value is in date range, otherwise false.
+            </returns>
+        </member>
+        <member name="M:MMLib.Extensions.DateTimeExtensions.Age(System.DateTime)">
+            <summary>
+            Get Age by birthDay date.
+            </summary>
+            <param name="birthDay">Date of birthDay.</param>
+            <returns>
+            Count of Age from birthDay to Today.
+            </returns>
+        </member>
+        <member name="M:MMLib.Extensions.DateTimeExtensions.IsToday(System.DateTime)">
+            <summary>
+            Determine whether value date is today.
+            </summary>
+            <param name="value">Checked date.</param>
+            <returns>
+            true if value is Today, otherwise false.
+            </returns>
+        </member>
+        <member name="M:MMLib.Extensions.DateTimeExtensions.AreInTheSameWeek(System.DateTime,System.DateTime)">
+            <summary>
+            Determine whether firstDate and secondDate are in the same week. 
+            </summary>
+            <param name="firstDate">First checking date.</param>
+            <param name="secondDate">Second checking date.</param>
+            <returns>
+            true if first and second date are from the same week, otherwise false.
+            </returns>
+        </member>
+        <member name="T:MMLib.Extensions.ObjectExtensions">
+            <summary>
+            Extensions for object.
+            </summary>
+        </member>
+        <member name="M:MMLib.Extensions.ObjectExtensions.SetPropertyValue(System.Object,System.String,System.Object)">
+            <summary>
+            Sets the value of the specified property.
+            </summary>
+            <param name="target">Target object.</param>
+            <param name="propertyName">A value which specifies the property's name.</param>
+            <param name="newValue">An object which represents the new value</param>
+            <returns>true if target object has this property, otherwise false.</returns>
+            <exception cref="T:System.ArgumentException">
+            Occured when newValue doesn't have same type as property.
+            </exception>
+        </member>
+        <member name="M:MMLib.Extensions.ObjectExtensions.GetPropertyValue``1(System.Object,System.String)">
+            <summary>
+            Returns the value of the specified property.
+            </summary>
+            <typeparam name="TValue">Type of return value, which expect.</typeparam>
+            <param name="target">Target object.</param>
+            <param name="propertyName">A value which specifies the property's name.</param>
+            <returns>
+            Value which represents the value of the specified property. 
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            This exception occured, when target object doesn't have specific propertyName.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            This exception occured, when return type is not type of the TValue.
+            </exception>
+        </member>
+        <member name="M:MMLib.Extensions.ObjectExtensions.GetPropertyValue(System.Object,System.String)">
+            <summary>
+            Returns the value of the specified property.
+            </summary>
+            <param name="target">Target object.</param>
+            <param name="propertyName">A value which specifies the property's name.</param>
+            <returns>
+            Value which represents the value of the specified property. 
+            </returns>
+            <exception cref="T:System.InvalidOperationException">
+            This exception occured, when target object doesn't have specific propertyName.
+            </exception>
+            <exception cref="T:System.ArgumentException">
+            This exception occured, when return type is not type of the TValue.
+            </exception>
+        </member>
+        <member name="M:MMLib.Extensions.ObjectExtensions.ToXElement(System.Object)">
+            <summary>
+            Serialize object value to XElement.
+            </summary>
+            <param name="value">Object value for serialization.</param>
+            <returns>
+            XElement with serialize data from object.
+            </returns>
+        </member>
+        <member name="M:MMLib.Extensions.ObjectExtensions.FromXElement``1(System.Xml.Linq.XElement)">
+            <summary>
+            Deserialize object from XElement
+            </summary>
+            <typeparam name="T">Type of deserialized value.</typeparam>
+            <param name="value">Serialized value in XElement.</param>
+            <returns>
+            Deserialized value.
+            </returns>
+        </member>
+        <member name="T:MMLib.Extensions.StringExtensions">
+            <summary>
+            Extensions for string
+            </summary>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.RemoveDiacritics(System.String)">
+            <summary>
+            Remove diacritics from string. Origin value can be null and String.Empty.
+            </summary>
+            <param name="value">Origin string value. </param>
+            <returns>New string value without diacritics.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.Truncate(System.String,System.Int32)">
+            <summary>
+            Truncate string to max lenght. Origin value can by null and String.Empty.
+            </summary>
+            <param name="value">Origin string value.</param>
+            <param name="maxLength">Max length of new string. Greater than zero.</param>
+            <returns>Truncated string.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.RemoveChars(System.String,System.String)">
+            <summary>
+            Remove unexpected chars from string.
+            </summary>
+            <param name="value">Origin string value. Can by null and String.Empty.</param>
+            <param name="unexpectedCharsString">String with unexpected chars. Can by null and String.Empty.</param>
+            <returns>New string without unexpected chars</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.SplitBySeparator(System.String,System.String)">
+            <summary>
+            Split string by string separator.
+            </summary>
+            <param name="value">Origin string.</param>
+            <param name="separator">Separator for spliting origin string.</param>
+            <returns>
+            Splited by separator.
+            </returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.SplitBySeparator(System.String,System.String,System.Boolean)">
+            <summary>
+            Split string by string separator.
+            </summary>
+            <param name="value">Origin string.</param>
+            <param name="separator">Separator for spliting origin string.</param>
+            <param name="canRemoveEmptyLines">
+            True, if can remove empty lines. Else false.
+            </param>
+            <returns>
+            Splited by separator.
+            </returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.SafeTrimStart(System.String)">
+            <summary>
+            Removes all leading occurrences of a set of characters specified in an array from the current System.String object.
+            If value is null then return null.
+            </summary>
+            <param name="value">
+            Origin string value.
+            </param>
+            <returns>
+            The string that remains after all occurrences of characters in the trimChars
+            parameter are removed from the start of the current string. If trimChars
+            is null or an empty array, white-space characters are removed instead.
+            </returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.SafeLength(System.String)">
+            <summary>
+            Gets the number of characters in the current System.String object.
+            If value is null then return 0.
+            </summary>
+            <param name="value">Origin string value.</param>
+            <returns>The number of characters in the current string.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.SafeSubstring(System.String,System.Int32)">
+            <summary>
+            Retrieves a substring from this instance. The substring starts at a specified
+            character position and has a specified length.
+            If value is null or empty then return origin text.
+            </summary>
+            <param name="value">Origin string value.</param>
+            <param name="length">The number of characters in the substring.</param>
+            <returns>
+            A string that is equivalent to the substring of length length that begins
+            at startIndex in this instance, or System.String.Empty if startIndex is equal
+            to the length of this instance and length is zero.
+            </returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.IsNumber(System.String)">
+            <summary>
+            Check, if string value is number.
+            </summary>
+            <param name="value">String value.</param>
+            <returns>True: if string value is number, else False.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.IsNullOrEmpty(System.String)">
+            <summary>
+             Indicates whether the specified string is null or an System.String.Emptystring.
+            </summary>
+            <param name="value">The string to test.</param>
+            <returns>true if the value parameter is null or an empty string (""); otherwise, false.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.IsNullOrWhiteSpace(System.String)">
+            <summary>
+             Indicates whether a specified string is null, empty, or consists only of  white-space characters.
+            </summary>
+            <param name="value">The string to test.</param>
+            <returns> true if the value parameter is null or System.String.Empty, or if value consists
+                exclusively of white-space characters.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.FormatAsPattern(System.String,System.Object)">
+            <summary>
+            Replaces one or more format items in a specified string with the string representation
+                of a specified object.
+            </summary>
+            <param name="format">A composite format string.</param>
+            <param name="arg0">The object to format.</param>
+            <returns>A copy of format in which any format items are replaced by the string representation of arg0.</returns>
+            <exception cref="T:System.FormatException">
+            The format item in format is invalid.-or- The index of a format item is not zero.
+            </exception>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.FormatAsPattern(System.String,System.Object[])">
+            <summary>
+            Replaces one or more format items in a specified string with the string representation
+                of a corresponding object in a specified array.
+            </summary>
+            <param name="format">A composite format string.</param>
+            <param name="args">An object array that contains zero or more objects to format.</param>
+            <returns>A copy of format in which any format items are replaced by the string representation of the corresponding objects in args.</returns>
+            <exception cref="T:System.FormatException">
+            The format item in format is invalid.-or- The index of a format item is not zero.
+            </exception>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.JoinToString(System.Object[],System.String)">
+            <summary>
+            Join values to one string with separator.
+            </summary>
+            <param name="values">Values for join.</param>
+            <param name="separator">Separator.</param>
+            <returns>String, which contain joined values with separator.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.JoinToString(System.Collections.Generic.List{System.String},System.String)">
+            <summary>
+            Join values to one string with separator.
+            </summary>
+            <param name="values">Values for join.</param>
+            <param name="separator">Separator.</param>
+            <returns>String, which contain joined values with separator.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.DefaultIfNull(System.String)">
+            <summary>
+            Check value is null and then return value or string.Empty.
+            </summary>
+            <param name="value">Value which check.</param>
+            <returns>Value if value is not null, otherwise string.Empty.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.DefaultIfNull(System.String,System.String)">
+            <summary>
+            Check value is null and then return value or defValue.
+            </summary>
+            <param name="value">Value which check.</param>
+            <param name="defValue">Default value if value is null.</param>
+            <returns>Value if value is not null, otherwise defValue.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.IsValidEmailAddress(System.String)">
+            <summary>
+            Check if specific email address is valid.
+            </summary>
+            <param name="emailAddress">Email address to test.</param>
+            <returns>true - if address is valid, otherwise false.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.IsValidIPAddress(System.String)">
+            <summary>
+            Check if specific IP address is valid.
+            </summary>
+            <param name="ipAddress">IP address to test.</param>
+            <returns>true - if address is valid, otherwise false.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.IsValidUrlAddress(System.String)">
+            <summary>
+            Check if specific URL address is valid.
+            </summary>
+            <param name="urlAddress">URL address to test.</param>
+            <returns>true - if address is valid, otherwise false.</returns>
+        </member>
+        <member name="M:MMLib.Extensions.StringExtensions.HtmlDecode(System.String)">
+            <summary>
+            Decode html text to plain text. (Replace Html entities like copy; to ©).
+            </summary>
+            <param name="htmlText">Html text.</param>
+            <returns>Plain text.</returns>
+        </member>
+    </members>
+</doc>

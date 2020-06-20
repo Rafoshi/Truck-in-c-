@@ -1,0 +1,14 @@
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\obj\Debug\Camiaozin.csprojAssemblyReference.cache
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\obj\Debug\Camiaozin.csproj.CoreCompileInputs.cache
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\bin\Debug\Camiaozin.exe.config
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\bin\Debug\Camiaozin.exe
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\bin\Debug\Camiaozin.pdb
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\obj\Debug\Camiaozin.exe
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\obj\Debug\Camiaozin.pdb
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\bin\Debug\MMLib.Core.dll
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\bin\Debug\MMLib.Extensions.dll
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\bin\Debug\MMLib.Core.pdb
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\bin\Debug\MMLib.Core.xml
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\bin\Debug\MMLib.Extensions.pdb
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\bin\Debug\MMLib.Extensions.xml
+C:\Users\Ioshi\Etec\DS\Camiaozin\Camiaozin\obj\Debug\Camiaozin.csproj.CopyComplete

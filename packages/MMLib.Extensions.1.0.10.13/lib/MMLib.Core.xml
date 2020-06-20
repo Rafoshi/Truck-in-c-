@@ -1,0 +1,231 @@
+<?xml version="1.0"?>
+<doc>
+    <assembly>
+        <name>MMLib.Core</name>
+    </assembly>
+    <members>
+        <member name="T:MMLib.Core.Providers.DateTimeProvider">
+            <summary>
+            Provider for islated application from DateTime
+            </summary>
+        </member>
+        <member name="T:MMLib.Core.Providers.IDateTimeProvider">
+            <summary>
+            Interface for DateTimeProvider.
+            </summary>
+        </member>
+        <member name="P:MMLib.Core.Providers.IDateTimeProvider.Today">
+            <summary>
+            Gets the current date.
+            </summary>
+        </member>
+        <member name="P:MMLib.Core.Providers.IDateTimeProvider.Now">
+            <summary>
+            Gets a System.DateTime object that is set to the current date and time on
+            this computer, expressed as the local time.
+            </summary>
+        </member>
+        <member name="P:MMLib.Core.Providers.DateTimeProvider.Today">
+            <summary>
+            Gets the current date.
+            </summary>
+        </member>
+        <member name="P:MMLib.Core.Providers.DateTimeProvider.Now">
+            <summary>
+            Gets a System.DateTime object that is set to the current date and time on
+            this computer, expressed as the local time.
+            </summary>
+        </member>
+        <member name="P:MMLib.Core.Providers.DateTimeProvider.Default">
+            <summary>
+            Default provider.
+            </summary>
+        </member>
+        <member name="T:MMLib.Core.Providers.Fakes.FakeDateTime">
+            <summary>
+            Fake DateTimeProvider for defined Now and Today.
+            </summary>
+        </member>
+        <member name="P:MMLib.Core.Providers.Fakes.FakeDateTime.Now">
+            <summary>
+            Gets Date and time, which I defined in constructor
+            </summary>
+        </member>
+        <member name="P:MMLib.Core.Providers.Fakes.FakeDateTime.Today">
+            <summary>
+            Gets the date, which I defined in constructor.
+            </summary>
+        </member>
+        <member name="T:MMLib.Core.Providers.Fakes.FakeProcessProvider">
+            <summary>
+            Fake process provider for testing.
+            </summary>
+        </member>
+        <member name="T:MMLib.Core.Providers.IProcessProvider">
+            <summary>
+            Interface for ProcessProvider, which represent System.Diagnostics.Process
+            </summary>
+        </member>
+        <member name="M:MMLib.Core.Providers.IProcessProvider.GetProcessesByName(System.String)">
+            <summary>
+            Creates an array of new IProcessProviders components associated
+            with all the process resources on the local computer that share the
+            specified process name.
+            </summary>
+            <param name="processName">The friendly name of the process.</param>
+            <returns>
+            An array of new IProcessProviders components associated
+            with all the process resources on the local computer that share the
+            specified process name.
+            </returns>
+        </member>
+        <member name="M:MMLib.Core.Providers.IProcessProvider.GetCurrentProcess">
+            <summary>
+            Gets new IProcessProvider which represent System.Diagnostics.Process component 
+            associated with the currently active process.
+            </summary>
+            <returns>
+            New IProcessProvider which represent System.Diagnostics.Process component 
+            associated with the currently active process
+            </returns>
+        </member>
+        <member name="P:MMLib.Core.Providers.IProcessProvider.Id">
+            <summary>
+            Gets the unique identifier for the associated process
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+             The process's System.Diagnostics.Process.Id property has not been set.-or-
+             There is no process associated with this System.Diagnostics.Process object.
+            </exception>
+            <exception cref="T:System.PlatformNotSupportedException">
+            The platform is Windows 98 or Windows Millennium Edition (Windows Me); set
+            System.Diagnostics.ProcessStartInfo.UseShellExecute to false to access this
+            property on Windows 98 and Windows Me.
+            </exception>
+        </member>
+        <member name="P:MMLib.Core.Providers.IProcessProvider.MainModuleFileName">
+            <summary>
+            Gets the full path to the main module.
+            </summary>
+        </member>
+        <member name="P:MMLib.Core.Providers.IProcessProvider.ProcessName">
+            <summary>
+            Gets the name that the system uses to identify the process to the user.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            The process does not have an identifier, or no process is associated with
+            the System.Diagnostics.Process.-or- The associated process has exited.
+            </exception>
+            <exception cref="T:System.PlatformNotSupportedException">
+            The platform is Windows 98 or Windows Millennium Edition (Windows Me); set
+            System.Diagnostics.ProcessStartInfo.UseShellExecute to false to access this
+            property on Windows 98 and Windows Me.
+            </exception>
+            <exception cref="T:System.NotSupportedException">The process is not on this computer.</exception>
+        </member>
+        <member name="M:MMLib.Core.Providers.Fakes.FakeProcessProvider.GetCurrentProcess">
+            <summary>
+            Gets fake IProcessProvider which represent System.Diagnostics.Process component 
+            associated with the currently active process.
+            </summary>
+            <returns>
+            Fake IProcessProvider which represent System.Diagnostics.Process component 
+            associated with the currently active process
+            </returns>
+        </member>
+        <member name="M:MMLib.Core.Providers.Fakes.FakeProcessProvider.GetProcessesByName(System.String)">
+            <summary>
+            Creates an array of new fake IProcessProviders.
+            </summary>
+            <param name="processName">The friendly name of the process.</param>
+            <returns>
+            An array of new IProcessProviders components associated
+            with all the process resources on the local computer that share the
+            specified process name.
+            </returns>
+        </member>
+        <member name="P:MMLib.Core.Providers.Fakes.FakeProcessProvider.Id">
+            <summary>
+            Gets the unique identifier for the associated process
+            </summary>        
+        </member>
+        <member name="P:MMLib.Core.Providers.Fakes.FakeProcessProvider.MainModuleFileName">
+            <summary>
+            Gets the full path to the main module.
+            </summary>
+        </member>
+        <member name="P:MMLib.Core.Providers.Fakes.FakeProcessProvider.ProcessName">
+            <summary>
+            Gets the name that the system uses to identify the process to the user.
+            </summary>
+        </member>
+        <member name="T:MMLib.Core.Providers.ProcessProvider">
+            <summary>
+            Process provider, which represent System.Diagnostics.Process.
+            We can change default provider to your custom IProcessProvider.
+            </summary>
+        </member>
+        <member name="M:MMLib.Core.Providers.ProcessProvider.GetCurrentProcess">
+            <summary>
+            Gets IProcessProvider which represent System.Diagnostics.Process component 
+            associated with the currently active process.
+            </summary>
+            <returns>
+            IProcessProvider which represent System.Diagnostics.Process component 
+            associated with the currently active process
+            </returns>
+        </member>
+        <member name="M:MMLib.Core.Providers.ProcessProvider.GetProcessesByName(System.String)">
+            <summary>
+            Creates an array of new IProcessProviders components associated
+            with all the process resources on the local computer that share the
+            specified process name.
+            </summary>
+            <param name="processName">The friendly name of the process.</param>
+            <returns>
+            An array of new IProcessProviders components associated
+            with all the process resources on the local computer that share the
+            specified process name.
+            </returns>
+        </member>
+        <member name="P:MMLib.Core.Providers.ProcessProvider.Id">
+            <summary>
+            Gets the unique identifier for the associated process
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+             The process's System.Diagnostics.Process.Id property has not been set.-or-
+             There is no process associated with this System.Diagnostics.Process object.
+            </exception>
+            <exception cref="T:System.PlatformNotSupportedException">
+            The platform is Windows 98 or Windows Millennium Edition (Windows Me); set
+            System.Diagnostics.ProcessStartInfo.UseShellExecute to false to access this
+            property on Windows 98 and Windows Me.
+            </exception>
+        </member>
+        <member name="P:MMLib.Core.Providers.ProcessProvider.MainModuleFileName">
+            <summary>
+            Gets the full path to the main module.
+            </summary>
+        </member>
+        <member name="P:MMLib.Core.Providers.ProcessProvider.ProcessName">
+            <summary>
+            Gets the name that the system uses to identify the process to the user.
+            </summary>
+            <exception cref="T:System.InvalidOperationException">
+            The process does not have an identifier, or no process is associated with
+            the System.Diagnostics.Process.-or- The associated process has exited.
+            </exception>
+            <exception cref="T:System.PlatformNotSupportedException">
+            The platform is Windows 98 or Windows Millennium Edition (Windows Me); set
+            System.Diagnostics.ProcessStartInfo.UseShellExecute to false to access this
+            property on Windows 98 and Windows Me.
+            </exception>
+            <exception cref="T:System.NotSupportedException">The process is not on this computer.</exception>
+        </member>
+        <member name="P:MMLib.Core.Providers.ProcessProvider.Default">
+            <summary>
+            Default IProcessProvider.
+            </summary>
+        </member>
+    </members>
+</doc>
