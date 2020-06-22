@@ -3,8 +3,8 @@
 
  ## Installation
 
- Use the package manager [pip](https://pip.pypa.io/en/stable/) to install foobar.
+ Use the package manager NuGet [MMLib](https://www.nuget.org/packages/MMLib.Extensions/) to install the special carater remover.
 
  ```bash
- pip install foobar
+ Install-Package MMLib.Extensions -Version 1.0.10.13
  ```
