@@ -1,5 +1,5 @@
 ## Truck in OOP 🚛
- #Exercises in C# OOP
+ **#Exercises in C# OOP**
 
  ## Installation ⚙
 
