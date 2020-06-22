@@ -1,7 +1,7 @@
 ## Truck in OOP 🚛
  #Exercises in C# OOP
 
- ## Installation 
+ ## Installation ⚙
 
  Use the package manager NuGet [MMLib](https://www.nuget.org/packages/MMLib.Extensions/) to install the special carater remover.
 
